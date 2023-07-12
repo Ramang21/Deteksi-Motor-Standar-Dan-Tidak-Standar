@@ -1,0 +1,67 @@
+{% include 'header.html' %}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Data Daftar Motor</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <!-- Main content -->
+    <section class="content">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <h3 class="text-center">Data Daftar Motor</h3>
+              <!-- /.card-header -->
+              <form action="{{ url_for('Data') }}" method="POST"></form>
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Nomor Identitas</th>
+                      <th>Nama</th>
+                      <th>Tanggal</th>
+                      <th>Status</th>
+                      <th>Keterangan</th>
+                      <th>Aksi</th>
+                  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for row in datatidakstandard %}
+                                    <tr>
+                                        <td>{{row.nomor_identitas}}</td>
+                                        <td>{{row.nama}}</td>
+                                         <td>{{row.tanggal}}</td>
+                                        <td>{{row.status}}</td>
+                                        <td>{{row.keterangan}}</td>
+                                        <td width="100">
+                                          <a href="/Hapus-Data/{{row.id}}"><i style="font-size:16px" class="fa fa-trash text-danger"
+                                                  aria-hidden="true"></i></a>
+                                        </td>
+                                        
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </form>
+            </div>
+        </div>
+        <!-- /.row (main row) -->
+     <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  {% include 'footer.html' %}
+ 

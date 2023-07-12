@@ -1,0 +1,45 @@
+{% include 'header.html' %}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <!-- Main content -->
+    <section class="content">
+      <div>
+        <h2 class="txt-fluid">Sistem Deteksi Kendaraan Standar dan Tidak Standar</h2>
+        <img src="{{ url_for('static', filename='dist/img/dashboarbg.png') }}" class="img-fluid" alt="gmbrdsh">
+      </div>
+        <style>
+          .txt-fluid {
+          size: 10px;
+          margin-top: 1px;
+          margin-left: 15%;
+          }
+          .img-fluid {
+          max-width: 2400px;
+          height: 600px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+  
+          }
+        </style>
+     
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+    {% include 'index.html' %}
+  </div>
+  <!-- /.content-wrapper -->
+  {% include 'footer.html' %}
+ 
